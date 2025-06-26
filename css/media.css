@@ -1,0 +1,60 @@
+@media (max-width: 384px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .avatar {
+        width: 100%;
+    }
+
+    .habilidades ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+
+    form {
+        width: 500px;
+    }
+
+    header {
+        flex-direction: row;
+    }
+
+    .sobre {
+        grid-template-columns: 400px 300px;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .texto_sobre {
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+
+    .avatar {
+        margin-top: 2rem;
+        grid-column: 2;
+        width: 80%;
+    }
+
+    .habilidades {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+
+        overflow: scroll;
+        scrollbar-color: #645eb3 #484480;
+        scrollbar-width: thin;
+    }
+
+    .info_extra {
+        grid-column: 1/3;
+    }
+}
