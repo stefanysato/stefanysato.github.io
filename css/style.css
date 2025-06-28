@@ -2,46 +2,80 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-gradiente: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(96, 119, 182) 100%);
+    --destaque-claro: #6386c5;
+    --destaque-escuro: #506b9e;
+    --cinza-escuro: #202020;
 }
 
 body {
-    color: #fff;
-    background: #000000;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(100, 94, 179, 1) 100%);
-    padding: 1rem;
+    color: #ffffff;
+    background-color: #000000;
+    background: var(--bg-gradiente);
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+}
+
+.pag_inicial {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    text-align: left;
+}
+
+.logo_container {
+    width: fit-content;
+}
+
+.logo::before {
+    content: "<";
+}
+
+.logo::after {
+    content: "/>";
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--destaque-claro);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    animation: typing 2.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+
 }
 
 header {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border: 1px solid #202020;
     padding: 1rem;
     align-items: center;
     justify-content: space-between;
-    border-radius: .8rem;
+    border-bottom: 1px solid var(--cinza-escuro);
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     padding: 2px;
     text-transform: lowercase;
 }
 
 nav a:hover {
-    color: #645eb3;
-    filter: drop-shadow(0 3px 2px #645eb3);
-    /* color: #000000;
-    background-color: #ffffff; */
+    color: var(--destaque-escuro);
+    filter: drop-shadow(0 3px 2px var(--cinza-escuro));
 }
 
 .ativo {
-    color: #645eb3;
-    border-bottom: 2px solid #645eb3;
+    color: var(--destaque-escuro);
+    border-bottom: 2px solid var(--destaque-claro);
 }
 
 h1 {
@@ -62,18 +96,18 @@ h3 {
 hr {
     height: 2px;
     border: none;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 footer {
-    margin-top: 1rem;
+    margin: 1rem;
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
 }
 
 #icones a>img:hover {
-    filter: drop-shadow(0 3px 1px #9d99cf);
+    filter: drop-shadow(0 3px 1px var(--cinza-escuro));
 }
 
 #inicio {
@@ -112,14 +146,14 @@ textarea {
 #botao-enviar {
     grid-column: 2;
     padding: .5rem;
-    border: 2px solid #645eb3;
+    border: 2px solid var(--destaque-claro);
     font-weight: 600;
 }
 
 #botao-enviar:hover {
     cursor: pointer;
-    background-color: #645eb3;
-    color: #000;
+    background-color: var(--destaque-claro);
+    color: var(--cinza-escuro);
 }
 
 main {
@@ -136,7 +170,8 @@ main {
 
 .titulo {
     margin: 1rem 0;
-    border-bottom: 2px solid #9d99cf;
+    border-bottom: 2px solid var(--destaque-claro);
+    font-family: 'Courier Prime', monospace;
 }
 
 .avatar {
@@ -144,11 +179,11 @@ main {
     height: auto;
     margin: auto;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid #ffffff;
 }
 
 .habilidades {
-    border: 2px dashed #484480;
+    border: 1px solid #ffffff;
 }
 
 .habilidades>ul {
@@ -161,20 +196,21 @@ main {
 }
 
 .habilidades>ul>li {
-    background: #645eb3;
+    background: var(--destaque-claro);
     padding: 2px;
     border-radius: 5px;
-    box-shadow: 0 3px 3px #202020;
+    box-shadow: 0 3px 3px var(--cinza-escuro);
 }
 
 .info_extra {
-    border: 1px solid #484480;
+    border: 1px solid #ffffff;
 }
 
 .info_extra>h2 {
-    background-color: #645eb3;
-    box-shadow: 2px 2px 6px #484480;
-    cursor: pointer;
+    background-color: var(--destaque-escuro);
+    box-shadow: 2px 2px 6px var(--cinza-escuro);
+    font-size: 1.2rem;
+
 }
 
 #info {
@@ -187,9 +223,7 @@ main {
     list-style: none;
 }
 
-.hide {
-    display: none;
-}
+/* Animações */
 
 @keyframes slideDown {
     from {
@@ -198,5 +232,27 @@ main {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--destaque-claro);
     }
 }
