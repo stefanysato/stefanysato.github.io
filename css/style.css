@@ -4,11 +4,60 @@
     box-sizing: border-box;
 }
 
+/* Declaração de cores do projeto */
+
 :root {
     --bg-gradiente: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(96, 119, 182) 100%);
     --destaque-claro: #6386c5;
     --destaque-escuro: #506b9e;
     --cinza-escuro: #202020;
+}
+
+/* Animação do logo */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--destaque-claro);
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--destaque-claro);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    animation: typing 2.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+.logo_container {
+    width: fit-content;
+}
+
+.logo::before {
+    content: "<";
+}
+
+.logo::after {
+    content: "/>";
 }
 
 body {
@@ -31,30 +80,6 @@ body {
 
 .noscroll {
     overflow: hidden;
-}
-
-.logo_container {
-    width: fit-content;
-}
-
-.logo::before {
-    content: "<";
-}
-
-.logo::after {
-    content: "/>";
-}
-
-.typewriter {
-    overflow: hidden;
-    border-right: .15em solid var(--destaque-claro);
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: .15em;
-
-    animation: typing 2.5s steps(40, end),
-        blink-caret .75s step-end infinite;
-
 }
 
 header {
@@ -131,6 +156,8 @@ footer {
     filter: drop-shadow(0 3px 1px var(--cinza-escuro));
 }
 
+/* Formulário */
+
 form {
     width: 90%;
     margin: 3rem auto;
@@ -172,6 +199,7 @@ textarea {
     color: var(--cinza-escuro);
 }
 
+/* Página - Sobre */
 .sobre {
     text-align: center;
     display: grid;
@@ -227,7 +255,9 @@ textarea {
     margin: 1rem;
 }
 
-.educacao {
+/* Páginas - Educação / Portfolio */
+
+.paginas {
     margin: 1rem;
 }
 
@@ -253,37 +283,18 @@ textarea {
     font-weight: 700;
 }
 
-
-/* Animações */
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.card>p>a {
+    color: var(--cinza-escuro);
 }
 
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
+.card>p>a:hover {
+    color: #ffffff;
+    background-color: var(--destaque-escuro);
+    text-decoration: none;
 }
 
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: var(--destaque-claro);
-    }
+.img-projeto {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
 }
