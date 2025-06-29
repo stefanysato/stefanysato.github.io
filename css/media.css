@@ -8,10 +8,6 @@
         width: 100%;
     }
 
-    .avatar {
-        width: 100%;
-    }
-
     .habilidades ul {
         grid-template-columns: 1fr;
     }
@@ -70,5 +66,14 @@
 
     .info_extra {
         grid-column: 1/3;
+    }
+
+    .educacao {
+        width: 700px;
+        margin: 2rem auto;
+    }
+
+    .cursos {
+        grid-template-columns: 1fr 1fr;
     }
 }

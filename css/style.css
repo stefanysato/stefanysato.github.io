@@ -22,9 +22,15 @@ body {
 .pag_inicial {
     display: flex;
     flex-direction: column;
-    height: 80vh;
     justify-content: center;
     text-align: left;
+    height: 80vh;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.noscroll {
+    overflow: hidden;
 }
 
 .logo_container {
@@ -78,19 +84,34 @@ nav a:hover {
     border-bottom: 2px solid var(--destaque-claro);
 }
 
+.titulo {
+    margin: 1rem 0;
+    text-decoration: underline 2px solid var(--destaque-claro);
+    font-family: 'Courier Prime', monospace;
+}
+
 h1 {
     font-weight: 300;
     font-size: 1.6rem;
 }
 
 h2 {
+    padding: 5px;
     font-size: 1.3rem;
     font-weight: 300;
+
+    background-color: var(--destaque-escuro);
+    box-shadow: 0 2px 3px var(--cinza-escuro);
+    font-size: 1.2rem;
 }
 
 h3 {
     font-size: 1.1rem;
     font-weight: 300;
+
+    margin: 1rem;
+    border-bottom: 2px solid var(--destaque-claro);
+    font-family: 'Courier Prime', monospace;
 }
 
 hr {
@@ -110,13 +131,8 @@ footer {
     filter: drop-shadow(0 3px 1px var(--cinza-escuro));
 }
 
-#inicio {
-    display: flex;
-    align-items: center;
-    height: 70vh;
-}
-
 form {
+    width: 90%;
     margin: 3rem auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -156,7 +172,7 @@ textarea {
     color: var(--cinza-escuro);
 }
 
-main {
+.sobre {
     text-align: center;
     display: grid;
     margin: 2rem 1rem;
@@ -168,14 +184,8 @@ main {
     text-align: justify;
 }
 
-.titulo {
-    margin: 1rem 0;
-    border-bottom: 2px solid var(--destaque-claro);
-    font-family: 'Courier Prime', monospace;
-}
-
 .avatar {
-    width: 300px;
+    width: 200px;
     height: auto;
     margin: auto;
     border-radius: 50%;
@@ -187,7 +197,7 @@ main {
 }
 
 .habilidades>ul {
-    margin: 2rem;
+    margin: 1rem;
     list-style: none;
     display: grid;
     gap: 1rem;
@@ -206,22 +216,43 @@ main {
     border: 1px solid #ffffff;
 }
 
-.info_extra>h2 {
-    background-color: var(--destaque-escuro);
-    box-shadow: 2px 2px 6px var(--cinza-escuro);
-    font-size: 1.2rem;
-
-}
-
 #info {
     text-align: left;
-    margin: 2rem;
+    margin: 1rem;
     animation: slideDown .7s forwards;
 }
 
-.lista_info {
+.lista {
     list-style: none;
+    margin: 1rem;
 }
+
+.educacao {
+    margin: 1rem;
+}
+
+.cursos {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--destaque-claro);
+    width: 100%;
+    padding: 1rem;
+    color: var(--cinza-escuro);
+    border-radius: 10px;
+}
+
+.card>h2 {
+    margin-bottom: 1rem;
+}
+
+.card>p>span {
+    font-weight: 700;
+}
+
 
 /* Animações */
 
