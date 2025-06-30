@@ -60,6 +60,8 @@
     content: "/>";
 }
 
+/* Estilo geral do site (mobile first) */
+
 body {
     color: #ffffff;
     background-color: #000000;
@@ -68,7 +70,7 @@ body {
     min-height: 100vh;
 }
 
-.pag_inicial {
+.pagina_inicial {
     display: flex;
     flex-direction: column;
     justify-content: center;

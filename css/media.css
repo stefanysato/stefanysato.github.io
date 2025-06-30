@@ -1,4 +1,4 @@
-/* Mobile */
+/* Mobile - até 384px de largura */
 @media (max-width: 384px) {
     body {
         font-size: 0.8rem;
@@ -23,7 +23,7 @@
     }
 }
 
-/* Desktop */
+/* Tablet, Desktop */
 @media (min-width: 768px) {
     body {
         padding: 2rem;
