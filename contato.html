@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/media.css"> <!-- Media queries -->
 </head>
 
-<body>
+<body class="noscroll">
     <!-- Início - Cabeçalho -->
     <header>
         <div class="logo_container courier-prime-bold">
@@ -29,16 +29,18 @@
     </header>
     <!-- Fim - Cabeçalho -->
 
-    <!-- Formulário Contato -->
-    <form>
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" required>
-        <label for="email">E-mail:</label>
-        <input type="text" name="email" id="email" required>
-        <label for="msg">Mensagem:</label>
-        <textarea name="msg" id="msg" required></textarea>
-        <input type="submit" value="Enviar" id="botao-enviar">
-    </form>
+    <main class="pagina1">
+        <!-- Formulário Contato -->
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+            <label for="email">E-mail:</label>
+            <input type="text" name="email" id="email" required>
+            <label for="msg">Mensagem:</label>
+            <textarea name="msg" id="msg" required></textarea>
+            <input type="submit" value="Enviar" id="botao-enviar" onclick="alerta()">
+        </form>
+    </main>
 
     <hr>
 
@@ -54,6 +56,12 @@
         </div>
         <p>Stefany Sato — 2025</p>
     </footer>
+
+    <script>
+        function alerta() {
+            window.alert("O formulário não está em funcionamento! Criado apenas para atividade da faculdade.")
+        }
+    </script>
 </body>
 
 </html>

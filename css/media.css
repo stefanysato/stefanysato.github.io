@@ -70,12 +70,12 @@
         grid-column: 1/3;
     }
 
-    .paginas {
+    .pagina2 {
         width: 700px;
         margin: 2rem auto;
     }
 
-    .cursos {
+    .grid_container {
         grid-template-columns: 1fr 1fr;
     }
 }
