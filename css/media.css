@@ -9,17 +9,20 @@
         width: 100%;
     }
 
-    .habilidades ul {
-        grid-template-columns: 1fr;
-    }
-
     .menu_inicio {
         display: flex;
         flex-direction: column;
+        font-size: 1rem;
+        gap: 10px;
     }
 
     .logo {
         font-size: 1.2rem;
+    }
+
+    /* formulário */
+    .pagina3 {
+        height: 60vh;
     }
 }
 
@@ -64,6 +67,10 @@
         overflow: scroll;
         scrollbar-color: #645eb3 #484480;
         scrollbar-width: thin;
+    }
+
+    .habilidades>ul {
+        grid-template-columns: 1fr 1fr;
     }
 
     .info_extra {

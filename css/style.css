@@ -239,13 +239,14 @@ textarea {
     list-style: none;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 150px;
     font-size: .8rem;
+    justify-content: center;
 }
 
 .habilidades>ul>li {
     background: var(--destaque-claro);
-    padding: 2px;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 0 3px 3px var(--cinza-escuro);
 }
@@ -260,7 +261,7 @@ textarea {
     animation: slideDown .7s forwards;
 }
 
-.lista {
+#info>ul {
     list-style: none;
     margin: 1rem;
 }
