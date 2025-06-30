@@ -162,6 +162,13 @@ footer {
 
 /* Formulário */
 
+.pagina3 {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
 form {
     margin: auto;
     display: grid;
@@ -173,7 +180,7 @@ input,
 textarea {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #999999;
+    border: 2px solid var(--destaque-claro);
     padding: .5rem;
     border-radius: 8px;
     font-family: inherit;
@@ -189,14 +196,14 @@ textarea {
     height: 100px;
 }
 
-#botao-enviar {
+.botao-enviar {
     grid-column: 2;
     padding: .5rem;
     border: 2px solid var(--destaque-claro);
     font-weight: 600;
 }
 
-#botao-enviar:hover {
+.botao-enviar:hover {
     cursor: pointer;
     background-color: var(--destaque-claro);
     color: var(--cinza-escuro);
