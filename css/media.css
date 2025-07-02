@@ -1,3 +1,12 @@
+/* Declaração de cores do projeto */
+
+:root {
+    --bg-gradiente: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(96, 119, 182) 100%);
+    --destaque-claro: #6386c5;
+    --destaque-escuro: #506b9e;
+    --cinza-escuro: #202020;
+}
+
 /* Mobile - até 384px de largura */
 @media (max-width: 384px) {
     body {
@@ -65,7 +74,7 @@
         flex-direction: column;
 
         overflow: scroll;
-        scrollbar-color: #645eb3 #484480;
+        scrollbar-color: var(--destaque-claro) var(--destaque-escuro);
         scrollbar-width: thin;
     }
 
